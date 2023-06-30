@@ -1,0 +1,51 @@
+@font-face {
+	font-family: "SUIT-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+		format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.movie {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 300px;
+	height: 169px;
+	margin: 30px;
+	cursor: pointer;
+	border-radius: 30px;
+	box-shadow: 0 25px 50px #000000;
+	transition: all 0.1s ease-in-out;
+}
+
+.movie:hover {
+	transform: translateY(-10px);
+}
+
+.movie * {
+	border-radius: 30px;
+}
+
+.movie div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #00000090;
+	box-shadow: inset 0 0 0 #00000080;
+	transition: all 0.1s ease-in-out;
+}
+
+.movie div:hover {
+	box-shadow: inset 0 0 200px #000000aa;
+}
+
+.movie h3 {
+	font-family: "SUIT-Regular";
+	color: white;
+}

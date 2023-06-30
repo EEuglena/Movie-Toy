@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.footer {
+	height: 80px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	background-color: darkseagreen;
+
+	text-align: center;
+	line-height: 80px;
+
+	color: white;
+	font-family: "Staatliches";
+	font-size: 48pt;
+}

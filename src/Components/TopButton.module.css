@@ -1,0 +1,17 @@
+.topbutton {
+	position: fixed;
+	width: 45px;
+	height: 45px;
+	right: 30px;
+	bottom: 30px;
+
+	border-radius: 5px;
+	background-color: darkseagreen;
+	box-shadow: 5px 5px 5px #0f1813;
+
+	text-align: center;
+	color: white;
+	font-size: 20pt;
+
+	cursor: pointer;
+}

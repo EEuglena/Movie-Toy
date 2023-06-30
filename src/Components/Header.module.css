@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.header {
+	position: sticky;
+	z-index: 1;
+	padding-top: 160px;
+	height: 120px;
+	top: -160px;
+	left: 0;
+	right: 0;
+
+	background-color: darkseagreen;
+
+	text-align: center;
+	line-height: 120px;
+}
+
+.header * {
+	text-decoration: none;
+	color: white;
+	font-family: "Staatliches";
+	font-size: 48pt;
+}
