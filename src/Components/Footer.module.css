@@ -1,17 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@font-face {
+	font-family: "ChosunSm";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
 .footer {
-	height: 80px;
+	padding: 40px;
 	left: 0;
 	right: 0;
 	bottom: 0;
 
-	background-color: darkseagreen;
+	background-color: rgb(45, 38, 56);
 
 	text-align: center;
-	line-height: 80px;
 
 	color: white;
-	font-family: "Staatliches";
-	font-size: 48pt;
+	font-family: "ChosunSm";
+}
+
+.footer p {
+	margin: 3px 0;
+}
+
+.footer p:first-child {
+	margin-bottom: 20px;
 }

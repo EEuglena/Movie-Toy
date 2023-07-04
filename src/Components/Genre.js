@@ -4,7 +4,7 @@ const Genre = ({ selected, id, name, setGenre }) => {
 	return (
 		<div
 			className={selected ? styles.selected : styles.genre}
-			onClick={selected ? null : () => setGenre(id)}
+			onClick={!selected && setGenre ? () => setGenre(id) : null}
 		>
 			{name}
 		</div>

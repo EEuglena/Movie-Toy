@@ -1,3 +1,92 @@
-.detail img {
+@font-face {
+	font-family: "Pretendard-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+.detail {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 40px;
+}
+
+.detail > div:first-child {
 	width: 100%;
+	height: 480px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* box-shadow: inset 0 0 500px black; */
+	padding: 0;
+}
+
+.detail img {
+	filter: drop-shadow(0 0 30px rgb(0, 0, 0));
+	height: 400px;
+	object-fit: cover;
+}
+
+.detail * {
+	font-family: "Pretendard-Regular";
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px 0;
+}
+
+.detail h1 {
+	margin: 0;
+	font-weight: 600;
+	font-size: 36pt;
+}
+
+.detail h2 {
+	margin: 0;
+	font-size: 16pt;
+	color: lightslategray;
+}
+
+.genres {
+	display: flex;
+	align-items: center;
+	font-size: 16pt;
+	color: lightslategray;
+}
+
+.genres > div {
+	background-color: slategray;
+	color: white;
+}
+
+.detail div > p:first-child {
+	font-size: 14pt;
+	font-weight: 600;
+}
+
+.overview {
+	width: 600px;
+	padding: 0 50px;
+}
+
+.poster {
+	width: 600px;
+}
+
+.poster img {
+	height: 150px;
+	cursor: pointer;
+	transition: transform 0.2s;
+	margin-right: 20px;
+}
+
+.poster img:hover {
+	transform: translateY(-5px);
 }

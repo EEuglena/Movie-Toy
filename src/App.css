@@ -1,9 +1,10 @@
-/* html::-webkit-scrollbar {
+html::-webkit-scrollbar {
 	display: none;
-} */
+}
 
 body {
 	margin: 0;
+	background-color: #161518;
 }
 
 .Main {
@@ -11,5 +12,4 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #0f1813;
 }
