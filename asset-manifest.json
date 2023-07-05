@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Movie-Toy/static/css/main.6d707ab8.css",
-    "main.js": "/Movie-Toy/static/js/main.00891048.js",
+    "main.css": "/Movie-Toy/static/css/main.2c6426ac.css",
+    "main.js": "/Movie-Toy/static/js/main.e1f51cc1.js",
     "index.html": "/Movie-Toy/index.html",
-    "main.6d707ab8.css.map": "/Movie-Toy/static/css/main.6d707ab8.css.map",
-    "main.00891048.js.map": "/Movie-Toy/static/js/main.00891048.js.map"
+    "main.2c6426ac.css.map": "/Movie-Toy/static/css/main.2c6426ac.css.map",
+    "main.e1f51cc1.js.map": "/Movie-Toy/static/js/main.e1f51cc1.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d707ab8.css",
-    "static/js/main.00891048.js"
+    "static/css/main.2c6426ac.css",
+    "static/js/main.e1f51cc1.js"
   ]
 }
