@@ -1,10 +1,12 @@
 import styles from "./Genre.module.css";
 
-const Genre = ({ selected, id, name, setGenre }) => {
+const Genre = ({ selected, id, name, onClick }) => {
 	return (
 		<div
-			className={selected ? styles.selected : styles.genre}
-			onClick={!selected && setGenre ? () => setGenre(id) : null}
+			className={selected === id ? styles.selected : styles.genre}
+			onClick={onClick}
+			id={id}
+			name={name}
 		>
 			{name}
 		</div>

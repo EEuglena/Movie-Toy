@@ -3,21 +3,27 @@ import Movie from "./Movie";
 import Genre from "./Genre";
 import styles from "./Category.module.css";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Category = () => {
 	const response = useFetch(
 		`https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=ko-KR`
 	);
-	const [genreList, setGenreList] = useState();
+	const { genre } = useParams();
+	const [genreList, setGenreList] = useState([]);
 	const [selectedGenre, setSelectedGenre] = useState();
-	const [selectedMovies, setSelectedMovies] = useState();
+	const [selectedMovies, setSelectedMovies] = useState([]);
 
 	useEffect(() => {
 		if (response) {
 			setGenreList(response.genres);
-			setSelectedGenre(response.genres[0].id);
+			setSelectedGenre(
+				genre && genre !== "default"
+					? response.genres.find((g) => g.name === genre).id
+					: response.genres[0].id
+			);
 		}
-	}, [response]);
+	}, [response, genre]);
 
 	useEffect(() => {
 		fetch(
@@ -34,10 +40,14 @@ const Category = () => {
 				{genreList &&
 					genreList.map((genre) => (
 						<Genre
-							selected={selectedGenre === genre.id}
-							key={genre.id}
 							{...genre}
-							setGenre={setSelectedGenre}
+							selected={parseInt(selectedGenre)}
+							key={genre.id}
+							onClick={(event) => {
+								event.preventDefault();
+								if (!event.target.selected)
+									setSelectedGenre(event.target.id);
+							}}
 						/>
 					))}
 			</div>

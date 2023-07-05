@@ -13,7 +13,7 @@ const Popular = () => {
 
 	return (
 		<div className={styles.popular}>
-			<h1>가장 인기있는 영화를 살펴보세요</h1>
+			<h1>인기있는 영화를 살펴보세요</h1>
 			<div className={styles.movies}>
 				{popularMovies &&
 					popularMovies.map((movie) => (

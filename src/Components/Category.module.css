@@ -23,14 +23,14 @@
 
 .genres {
 	display: flex;
-	width: 600px;
+	width: max(420px, 50vw);
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
 .movies {
 	display: flex;
-	width: max(600px, 75vw);
+	width: max(420px, 75vw);
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;

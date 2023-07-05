@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import styles from "./Detail.module.css";
 import Genre from "../Components/Genre";
 
 const Detail = () => {
 	const { id } = useParams();
+	const navigate = useNavigate();
 	const detail = useFetch(
 		`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=ko-KR`
 	);
@@ -24,7 +25,15 @@ const Detail = () => {
 						<h1>{detail.title}</h1>
 						<div className={styles.genres}>
 							{detail.genres.map((genre) => (
-								<Genre {...genre} />
+								<Genre
+									{...genre}
+									onClick={(event) => {
+										console.log(event.target);
+										navigate(
+											`/genre/${event.target.innerText}`
+										);
+									}}
+								/>
 							))}
 						</div>
 					</div>
